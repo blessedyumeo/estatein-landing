@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse Estatein property listings: villas, apartments, lofts and family houses.">
+  <title>Properties — Estatein</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="">
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <symbol id="i-logo" viewBox="0 0 32 32"><path fill="currentColor" d="M4 7.2C4 5.4 5.4 4 7.2 4c1.2 0 2.3.7 2.9 1.8l1.6 3.4V7.2C11.7 5.4 13.1 4 14.9 4h9.9C26.6 4 28 5.4 28 7.2v10.2C28 24.4 22.4 30 15.5 30S3 24.4 3 17.4V7.2H4z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.9 5.6c.3.9 1 1.6 1.9 1.9L21.4 11l-5.6 1.9c-.9.3-1.6 1-1.9 1.9L12 20.4l-1.9-5.6c-.3-.9-1-1.6-1.9-1.9L2.6 11l5.6-1.9c.9-.3 1.6-1 1.9-1.9L12 2z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.4L12 17.4l-5.8 3 1.1-6.4L2.6 9.4l6.5-.9L12 2.6z"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m0 0 6-6m-6 6 6 6"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-7h18v7M3 18v2m18-2v2M3 11V6m4 5V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2m0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-bath" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3zM6 12V6a2 2 0 0 1 2-2h1M6 19l-1 2m14-2 1 2"/></symbol>
+  <symbol id="i-villa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-5h4v5"/></symbol>
+  <symbol id="i-area" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM9 4v16M4 9h16"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3zM3 7l9 6 9-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h3l2 5-2.5 1.5a12 12 0 0 0 5 5L16 12l5 2v3a2 2 0 0 1-2.2 2A16.8 16.8 0 0 1 5 7.2 2 2 0 0 1 7 5V3z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.5 13.5M21 3l-6.8 18-3.7-7.5L3 10l18-7z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4 10-10"/></symbol>
+  <symbol id="i-shop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16l-1 11H5L4 9zM4 9l2-5h12l2 5M9 13v3m6-3v3"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h15a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7zm0 0 12-3v3"/><circle cx="16.5" cy="13" r="1.3"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5l7-3v19M4 21h16M11 21V9l8 2v10M7 9h1m-1 4h1m-1 4h1m6-4h2m-2 4h2"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 20V10m7 10V4m7 16v-7"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5zM3 13l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="4.5"/><path d="m11.5 11.5 8 8M17 17l2-2m-4-1 2-2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4"/><path d="M3 20a6 6 0 0 1 12 0M16.5 5.2a3.4 3.4 0 0 1 0 6.6M17 14.6a6 6 0 0 1 4 5.4"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5a5.5 5.5 0 0 0-6.6 7.1L3.5 16v4.5H8l5.4-5.4a5.5 5.5 0 0 0 7.1-6.6l-3 3-2.9-.6-.6-2.9 3-3z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.6-3.3 8.4-8 9.5C7.3 20.4 4 16.6 4 12V6l8-3z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 4 10 5-10 5L2 9l10-5zM6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-9.2A4 4 0 0 1 12 8a4 4 0 0 1 7 2.8C19 15.6 12 20 12 20z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12.5V4h8.5L21 13.5 13.5 21 3 12.5z"/><circle cx="7.5" cy="7.5" r="1.3"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3 0-1.3-.1-2.45-.1-2.4 0-4.05 1.5-4.05 4.2v2.2H7.5V13h2.7v8h3.3z"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M4.8 3a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8zM3.2 8.4h3.2V21H3.2V8.4zm5.4 0h3.1v1.7h.05c.45-.8 1.55-1.7 3.2-1.7 3.4 0 4.05 2.2 4.05 5.1V21h-3.2v-6c0-1.4 0-3.3-2-3.3s-2.3 1.5-2.3 3.2V21H8.6V8.4z"/></symbol>
+  <symbol id="i-tw" viewBox="0 0 24 24"><path fill="currentColor" d="M21 5.9c-.7.3-1.4.5-2.1.6.8-.5 1.3-1.2 1.6-2.1-.7.4-1.5.7-2.4.9A3.7 3.7 0 0 0 11.8 8c-3-.2-5.7-1.6-7.5-3.9-.3.6-.5 1.2-.5 2 0 1.3.7 2.4 1.7 3.1-.6 0-1.2-.2-1.7-.5 0 1.8 1.3 3.3 3 3.7-.3.1-.7.1-1 .1-.2 0-.5 0-.7-.1.5 1.5 1.9 2.6 3.5 2.6A7.4 7.4 0 0 1 3 16.6a10.4 10.4 0 0 0 5.7 1.7c6.8 0 10.5-5.7 10.5-10.6v-.5c.7-.5 1.3-1.2 1.8-1.9z"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 8.2a2.5 2.5 0 0 0-1.7-1.8C18.3 6 12 6 12 6s-6.3 0-7.8.4A2.5 2.5 0 0 0 2.5 8.2C2.1 9.7 2.1 12 2.1 12s0 2.3.4 3.8a2.5 2.5 0 0 0 1.7 1.8C5.7 18 12 18 12 18s6.3 0 7.8-.4a2.5 2.5 0 0 0 1.7-1.8c.4-1.5.4-3.8.4-3.8s0-2.3-.4-3.8zM10 15V9l5.2 3L10 15z"/></symbol>
+</svg>
+
+  <div class="topbar" data-topbar>
+    <div class="topbar__inner">
+      <span class="topbar__text">✨ Discover Your Dream Property with Estatein</span>
+      <a class="topbar__link" href="properties.html">Learn More</a>
+      <button class="topbar__close" type="button" data-topbar-close aria-label="Close announcement">
+        <svg><use href="#i-close"></use></svg>
+      </button>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">
+        <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"></use></svg>
+        <span>Estatein</span>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <ul class="nav__list"><li><a class="nav__link" href="index.html">Home</a></li><li><a class="nav__link" href="about.html">About Us</a></li><li><a class="nav__link is-active" href="properties.html" aria-current="page">Properties</a></li><li><a class="nav__link" href="services.html">Services</a></li></ul>
+      </nav>
+
+      <a class="btn header__cta" href="contact.html">Contact Us</a>
+
+      <button class="burger" type="button" data-menu-open aria-label="Open menu" aria-expanded="false">
+        <svg><use href="#i-burger"></use></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" data-menu aria-hidden="true">
+    <div class="mobile-menu__top">
+      <a class="logo" href="index.html">
+        <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"></use></svg>
+        <span>Estatein</span>
+      </a>
+      <button class="mobile-menu__close" type="button" data-menu-close aria-label="Close menu">
+        <svg><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__list" aria-label="Mobile"><a class="" href="index.html">Home</a><a class="" href="about.html">About Us</a><a class="is-active" href="properties.html">Properties</a><a class="" href="services.html">Services</a>
+      <a class="" href="contact.html">Contact Us</a>
+    </nav>
+    <a class="btn btn--primary btn--block" href="contact.html">Contact Us</a>
+  </div>
+
+  <main>
+  <section class="page-hero">
+    <img class="page-hero__pattern" src="img/pattern-lines.svg" alt="" aria-hidden="true">
+    <div class="container page-hero__inner">
+      <h1>Find Your Dream Property</h1>
+      <p class="page-hero__text">Welcome to Estatein, where your dream property awaits in every corner of our beautiful
+        world. Explore our curated selection of properties, each offering a unique story and a chance to redefine your
+        life. With categories to suit every dreamer, your journey starts here.</p>
+
+      <form class="search" data-form novalidate>
+        <div class="search__bar">
+          <input type="search" name="q" placeholder="Search For A Property" aria-label="Search for a property">
+          <button class="btn btn--primary btn--sm" type="submit"><svg class="btn__icon" aria-hidden="true"><use href="#i-search"></use></svg>Find Property</button>
+        </div>
+        <div class="search__filters">
+          <label class="control control--select">
+            <svg class="control__icon" aria-hidden="true"><use href="#i-pin"></use></svg>
+            <span class="visually-hidden">Location</span>
+            <select name="location">
+              <option value="">Location</option>
+              <option>New York</option>
+              <option>Los Angeles</option>
+              <option>Miami</option>
+              <option>Chicago</option>
+            </select>
+            <svg class="control__chevron" aria-hidden="true"><use href="#i-chevron"></use></svg>
+          </label>
+          <label class="control control--select">
+            <svg class="control__icon" aria-hidden="true"><use href="#i-villa"></use></svg>
+            <span class="visually-hidden">Property Type</span>
+            <select name="property-type">
+              <option value="">Property Type</option>
+              <option>Villa</option>
+              <option>Apartment</option>
+              <option>Loft</option>
+              <option>Townhouse</option>
+            </select>
+            <svg class="control__chevron" aria-hidden="true"><use href="#i-chevron"></use></svg>
+          </label>
+          <label class="control control--select">
+            <svg class="control__icon" aria-hidden="true"><use href="#i-wallet"></use></svg>
+            <span class="visually-hidden">Pricing Range</span>
+            <select name="pricing-range">
+              <option value="">Pricing Range</option>
+              <option>$100k – $300k</option>
+              <option>$300k – $600k</option>
+              <option>$600k – $1M</option>
+              <option>$1M+</option>
+            </select>
+            <svg class="control__chevron" aria-hidden="true"><use href="#i-chevron"></use></svg>
+          </label>
+          <label class="control control--select">
+            <svg class="control__icon" aria-hidden="true"><use href="#i-area"></use></svg>
+            <span class="visually-hidden">Property Size</span>
+            <select name="property-size">
+              <option value="">Property Size</option>
+              <option>Up to 1,000 sqft</option>
+              <option>1,000 – 2,500 sqft</option>
+              <option>2,500 sqft+</option>
+            </select>
+            <svg class="control__chevron" aria-hidden="true"><use href="#i-chevron"></use></svg>
+          </label>
+          <label class="control control--select">
+            <svg class="control__icon" aria-hidden="true"><use href="#i-grid"></use></svg>
+            <span class="visually-hidden">Build Year</span>
+            <select name="build-year">
+              <option value="">Build Year</option>
+              <option>2024</option>
+              <option>2020 – 2023</option>
+              <option>2010 – 2019</option>
+              <option>Before 2010</option>
+            </select>
+            <svg class="control__chevron" aria-hidden="true"><use href="#i-chevron"></use></svg>
+          </label>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow section-head__eyebrow"><svg class="eyebrow__star"><use href="#i-sparkle"></use></svg><span class="eyebrow__dot"></span><span class="eyebrow__dot"></span></div>
+        <div class="section-head__main">
+          <h2>Discover a World of Possibilities</h2>
+          <p class="lead">Our portfolio of properties is as diverse as your dreams. Explore the following categories to find the perfect property that resonates with your vision of home.</p>
+        </div>
+        
+      </div>
+      <div class="slider" data-slider>
+        <div class="slider__track" data-slider-track>
+          <article class="property">
+            <div class="property__media"><img src="img/properties/seaside-serenity-villa.svg" alt="Seaside Serenity Villa" loading="lazy" width="800" height="600"></div>
+            <span class="property__tagline">Coastal Escapes - Where Waves Beckon</span>
+            <div class="property__body">
+              <h3 class="property__title">Seaside Serenity Villa</h3>
+              <p class="property__desc">A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood… <a href="property-details.html">Read More</a></p>
+            </div>
+            <ul class="tags">
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bed"></use></svg>4-Bedroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bath"></use></svg>3-Bathroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-villa"></use></svg>Villa</li>
+            </ul>
+            <div class="property__foot">
+              <p class="price"><span class="price__label">Price</span><span class="price__value">$1,250,000</span></p>
+              <a class="btn btn--primary" href="property-details.html">View Property Details</a>
+            </div>
+          </article>
+          <article class="property">
+            <div class="property__media"><img src="img/properties/metropolitan-haven.svg" alt="Metropolitan Haven" loading="lazy" width="800" height="600"></div>
+            <span class="property__tagline">Urban Oasis - Life in the Heart of the City</span>
+            <div class="property__body">
+              <h3 class="property__title">Metropolitan Haven</h3>
+              <p class="property__desc">A chic and fully-furnished 2-bedroom apartment with panoramic city views… <a href="property-details.html">Read More</a></p>
+            </div>
+            <ul class="tags">
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bed"></use></svg>2-Bedroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bath"></use></svg>2-Bathroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-villa"></use></svg>Villa</li>
+            </ul>
+            <div class="property__foot">
+              <p class="price"><span class="price__label">Price</span><span class="price__value">$650,000</span></p>
+              <a class="btn btn--primary" href="property-details.html">View Property Details</a>
+            </div>
+          </article>
+          <article class="property">
+            <div class="property__media"><img src="img/properties/rustic-retreat-cottage.svg" alt="Rustic Retreat Cottage" loading="lazy" width="800" height="600"></div>
+            <span class="property__tagline">Countryside Charm - Escape to Nature's Embrace</span>
+            <div class="property__body">
+              <h3 class="property__title">Rustic Retreat Cottage</h3>
+              <p class="property__desc">An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community… <a href="property-details.html">Read More</a></p>
+            </div>
+            <ul class="tags">
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bed"></use></svg>3-Bedroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bath"></use></svg>3-Bathroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-villa"></use></svg>Villa</li>
+            </ul>
+            <div class="property__foot">
+              <p class="price"><span class="price__label">Price</span><span class="price__value">$350,000</span></p>
+              <a class="btn btn--primary" href="property-details.html">View Property Details</a>
+            </div>
+          </article>
+          <article class="property">
+            <div class="property__media"><img src="img/properties/urban-oasis-loft.svg" alt="Urban Oasis Loft" loading="lazy" width="800" height="600"></div>
+            <span class="property__tagline">City Lights - Designed for Modern Living</span>
+            <div class="property__body">
+              <h3 class="property__title">Urban Oasis Loft</h3>
+              <p class="property__desc">A bright 2-bedroom loft with floor-to-ceiling windows and a private terrace… <a href="property-details.html">Read More</a></p>
+            </div>
+            <ul class="tags">
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bed"></use></svg>2-Bedroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bath"></use></svg>2-Bathroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-villa"></use></svg>Loft</li>
+            </ul>
+            <div class="property__foot">
+              <p class="price"><span class="price__label">Price</span><span class="price__value">$780,000</span></p>
+              <a class="btn btn--primary" href="property-details.html">View Property Details</a>
+            </div>
+          </article>
+          <article class="property">
+            <div class="property__media"><img src="img/properties/coastal-escape-villa.svg" alt="Coastal Escape Villa" loading="lazy" width="800" height="600"></div>
+            <span class="property__tagline">Ocean Breeze - Wake Up to the Horizon</span>
+            <div class="property__body">
+              <h3 class="property__title">Coastal Escape Villa</h3>
+              <p class="property__desc">A spacious 5-bedroom villa with an infinity pool and direct beach access… <a href="property-details.html">Read More</a></p>
+            </div>
+            <ul class="tags">
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bed"></use></svg>5-Bedroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bath"></use></svg>4-Bathroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-villa"></use></svg>Villa</li>
+            </ul>
+            <div class="property__foot">
+              <p class="price"><span class="price__label">Price</span><span class="price__value">$1,480,000</span></p>
+              <a class="btn btn--primary" href="property-details.html">View Property Details</a>
+            </div>
+          </article>
+          <article class="property">
+            <div class="property__media"><img src="img/properties/countryside-charm.svg" alt="Countryside Charm House" loading="lazy" width="800" height="600"></div>
+            <span class="property__tagline">Green Valley - Peace Just Outside the City</span>
+            <div class="property__body">
+              <h3 class="property__title">Countryside Charm House</h3>
+              <p class="property__desc">A cosy 3-bedroom family house surrounded by gardens and quiet forest paths… <a href="property-details.html">Read More</a></p>
+            </div>
+            <ul class="tags">
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bed"></use></svg>3-Bedroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-bath"></use></svg>2-Bathroom</li>
+              <li class="tag"><svg aria-hidden="true"><use href="#i-villa"></use></svg>House</li>
+            </ul>
+            <div class="property__foot">
+              <p class="price"><span class="price__label">Price</span><span class="price__value">$420,000</span></p>
+              <a class="btn btn--primary" href="property-details.html">View Property Details</a>
+            </div>
+          </article>
+        </div>
+        <div class="slider-foot">
+          <p class="slider-count"><b data-slider-current>01</b> of <span data-slider-total data-total="10">10</span></p>
+          <div class="slider-nav">
+            <button class="slider-btn" type="button" data-slider-prev aria-label="Previous"><svg aria-hidden="true"><use href="#i-arrow-left"></use></svg></button>
+            <button class="slider-btn" type="button" data-slider-next aria-label="Next"><svg aria-hidden="true"><use href="#i-arrow-right"></use></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="request">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow section-head__eyebrow"><svg class="eyebrow__star"><use href="#i-sparkle"></use></svg><span class="eyebrow__dot"></span><span class="eyebrow__dot"></span></div>
+        <div class="section-head__main">
+          <h2>Let's Make it Happen</h2>
+          <p class="lead">Ready to take the first step toward your dream property? Fill out the form below, and our real estate wizards will work their magic to find your perfect match. Don't wait, let's embark on this exciting journey together.</p>
+        </div>
+        
+      </div>
+      <form class="form" data-form novalidate>
+        <div class="form__grid form__grid--4">
+          <label class="field"><span>First Name</span>
+            <span class="control"><input type="text" name="first-name" placeholder="Enter First Name" required></span>
+            <span class="field__error">Required field</span>
+          </label>
+          <label class="field"><span>Last Name</span>
+            <span class="control"><input type="text" name="last-name" placeholder="Enter Last Name" required></span>
+            <span class="field__error">Required field</span>
+          </label>
+          <label class="field"><span>Email</span>
+            <span class="control"><input type="email" name="email" placeholder="Enter your Email" required></span>
+            <span class="field__error">Enter a valid email</span>
+          </label>
+          <label class="field"><span>Phone</span>
+            <span class="control"><input type="tel" name="phone" placeholder="Enter Phone Number"></span>
+          </label>
+
+          <label class="field"><span>Preferred Location</span>
+            <span class="control control--select">
+              <select name="location"><option value="">Select Location</option><option>New York</option><option>Los Angeles</option><option>Miami</option></select>
+              <svg class="control__chevron" aria-hidden="true"><use href="#i-chevron"></use></svg>
+            </span>
+          </label>
+          <label class="field"><span>Property Type</span>
+            <span class="control control--select">
+              <select name="type"><option value="">Select Property Type</option><option>Villa</option><option>Apartment</option><option>Loft</option></select>
+              <svg class="control__chevron" aria-hidden="true"><use href="#i-chevron"></use></svg>
+            </span>
+          </label>
+          <label class="field"><span>No. of Bathrooms</span>
+            <span class="control control--select">
+              <select name="bathrooms"><option value="">Select no. of Bathrooms</option><option>1</option><option>2</option><option>3+</option></select>
+              <svg class="control__chevron" aria-hidden="true"><use href="#i-chevron"></use></svg>
+            </span>
+          </label>
+          <label class="field"><span>No. of Bedrooms</span>
+            <span class="control control--select">
+              <select name="bedrooms"><option value="">Select no. of Bedrooms</option><option>1</option><option>2</option><option>3+</option></select>
+              <svg class="control__chevron" aria-hidden="true"><use href="#i-chevron"></use></svg>
+            </span>
+          </label>
+        </div>
+
+        <div class="form__grid form__grid--2">
+          <label class="field"><span>Budget</span>
+            <span class="control control--select">
+              <select name="budget"><option value="">Select Budget</option><option>$100k – $300k</option><option>$300k – $600k</option><option>$600k+</option></select>
+              <svg class="control__chevron" aria-hidden="true"><use href="#i-chevron"></use></svg>
+            </span>
+          </label>
+          <div class="field"><span>Preferred Contact Method</span>
+            <div class="form__grid form__grid--2">
+              <span class="control"><svg class="control__icon" aria-hidden="true"><use href="#i-phone"></use></svg><input type="tel" name="contact-phone" placeholder="Enter Your Number"></span>
+              <span class="control"><svg class="control__icon" aria-hidden="true"><use href="#i-mail"></use></svg><input type="email" name="contact-email" placeholder="Enter Your Email"></span>
+            </div>
+          </div>
+        </div>
+
+        <label class="field field--full"><span>Message</span>
+          <span class="control"><textarea name="message" placeholder="Enter your Message here.."></textarea></span>
+        </label>
+
+        <div class="form__foot">
+          <label class="checkbox">
+            <input type="checkbox" name="agree" required>
+            <span>I agree with <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></span>
+          </label>
+          <button class="btn btn--primary" type="submit">Send Your Message</button>
+        </div>
+        <p class="form__status" data-form-status role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="cta">
+    <img class="cta__pattern" src="img/pattern-cta.svg" alt="" aria-hidden="true">
+    <div class="container cta__inner">
+      <div class="cta__text">
+        <h2>Start Your Real Estate Journey Today</h2>
+        <p class="lead">Your dream property is just a click away. Whether you're looking for a new home, a strategic
+          investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first
+          step towards your real estate goals and explore our available properties or get in touch with our team for
+          personalized assistance.</p>
+      </div>
+      <div class="cta__action">
+        <a class="btn btn--primary" href="properties.html">Explore Properties</a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="index.html">
+          <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"></use></svg>
+          <span>Estatein</span>
+        </a>
+        <form class="subscribe" data-form novalidate>
+          <svg class="subscribe__icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+          <input type="email" name="email" placeholder="Enter Your Email" aria-label="Enter your email" required>
+          <button class="subscribe__btn" type="submit" aria-label="Subscribe">
+            <svg><use href="#i-send"></use></svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h3>Home</h3>
+          <ul>
+            <li><a href="index.html#hero">Hero Section</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#properties">Properties</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="index.html#faq">FAQ's</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="about.html#journey">Our Story</a></li>
+            <li><a href="about.html#achievements">Our Works</a></li>
+            <li><a href="about.html#steps">How It Works</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+            <li><a href="about.html#clients">Our Clients</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>Properties</h3>
+          <ul>
+            <li><a href="properties.html#catalog">Portfolio</a></li>
+            <li><a href="properties.html#catalog">Categories</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html#selling">Valuation Mastery</a></li>
+            <li><a href="services.html#selling">Strategic Marketing</a></li>
+            <li><a href="services.html#selling">Negotiation Wizardry</a></li>
+            <li><a href="services.html#selling">Closing Success</a></li>
+            <li><a href="services.html#management">Property Management</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><a href="contact.html#connect">Contact Form</a></li>
+            <li><a href="contact.html#offices">Our Offices</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <div class="footer__legal">
+          <span>@<span data-year>2023</span> Estatein. All Rights Reserved.</span>
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg><use href="#i-fb"></use></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg><use href="#i-in"></use></svg></a>
+          <a href="#" aria-label="Twitter"><svg><use href="#i-tw"></use></svg></a>
+          <a href="#" aria-label="YouTube"><svg><use href="#i-yt"></use></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
